@@ -1,0 +1,13 @@
+.container-about {
+  min-height: 100vh;
+  padding: 4rem 1.5rem 1.5rem 2.5rem;
+}
+.about-layout {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.about-layout article {
+  width: 50%;
+}

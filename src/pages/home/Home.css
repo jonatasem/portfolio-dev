@@ -1,0 +1,149 @@
+/*home-geral*/
+.container-home {
+  display: flex;
+  max-width: 100%;
+  padding: 5rem 1.5rem 1.5rem 4.5rem;
+}
+.home-left,
+.home-right {
+  width: calc(100% / 2);
+}
+
+/*home-left*/
+.home-left h3 {
+  font-weight: 400;
+}
+.home-left h1 {
+  font-size: 50px;
+  margin-bottom: 1rem;
+}
+.home-left p {
+  margin-bottom: 1rem;
+}
+
+/*home-right*/
+.home-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-right img {
+  width: 100%;
+  max-width: 400px;
+}
+
+/*home-skills*/
+.home-skills {
+  display: flex;
+  flex-wrap: wrap;
+}
+.home-skills li {
+  list-style-type: none;
+  margin: 1rem;
+  background-image: linear-gradient(to bottom, #ffffff1a, #ffffff00);
+  text-align: center;
+  padding: 0.5rem 1rem;
+}
+
+/*home-buttons*/
+.home-buttons {
+  padding: 0.5rem;
+}
+.home-buttons button {
+  padding: 1rem 2rem;
+  background-color: transparent;
+  color: silver;
+  cursor: pointer;
+  border-color: transparent;
+  background-color: #ffffff1a;
+  font-size: 15px;
+}
+
+.home-buttons a {
+  display: inline-block;
+  color: black;
+  background-color: #d1f34a;
+  padding: 1rem 2rem;
+  margin-right: 1rem;
+  font-size: 15px;
+}
+
+.home-buttons button:first-child {
+  margin-right: 2rem;
+  background-color: #d1f34a;
+  color: black;
+}
+
+.btn-curriculo {
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s;
+}
+.btn-curriculo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #d1f34a;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+  z-index: 0;
+}
+.btn-curriculo:hover::before {
+  transform: translateX(0);
+}
+
+.btn-curriculo:hover {
+  color: black;
+}
+
+.btn-curriculo span {
+  position: relative;
+  z-index: 1;
+}
+
+
+@media (max-width: 999px) {
+  .home-right {
+    width: 100%;
+    display: flex;
+  }
+  .home-right img {
+    max-width: 300px;
+  }
+  .container-home {
+    flex-direction: column;
+  }
+  .home-left {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-left h1 {
+    font-size: 30px;
+  }
+  .container-home {
+    padding: 5rem 1.5rem 0;
+  }
+}
+
+@media (max-width:470px) {
+  .home-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+  .home-buttons a {
+    width: 100%;
+    text-align: center;
+  }
+  .home-buttons a:first-child {
+    margin-bottom: 1rem;
+  }
+}

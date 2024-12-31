@@ -1,0 +1,94 @@
+.container-opened {
+  padding: 1.5rem;
+  background-image: url(../../assets/img/fundo.png);
+  min-height: 100vh;
+}
+.layout-opened {
+  display: flex;
+}
+.layout-opened article {
+  width: 50%;
+  padding: 1rem;
+}
+.container-opened h2 {
+  margin-bottom: 1rem;
+}
+.container-opened img {
+  width: 100%;
+  max-width: 500px;
+}
+
+.btn-opened {
+  position: absolute;
+  bottom: 25px;
+  right: 50px;
+  color: white;
+}
+
+.btn-code {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.live {
+  color: black;
+  padding: 1rem;
+  background-color: #d1f34a;
+
+}
+.github,
+.live {
+  cursor: pointer;
+  margin: 0 0.5rem;
+}
+
+.github {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s;
+  color: white;
+  padding: 1rem 2rem;
+  background-color: #ffffff1a;
+}
+.github::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #d1f34a;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+  z-index: 0;
+}
+.github:hover::before {
+  transform: translateX(0);
+}
+
+.github:hover {
+  color: black;
+}
+
+.github span {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width:768px) {
+  .btn-code a {
+    font-size: 12px;
+    padding: 0.5rem 1rem;
+  }
+}
+
+
+
+@media (max-width:999px) {
+  .layout-opened {
+    flex-direction: column;
+  }
+  .layout-opened article {
+    width: 100%;
+  }
+}
