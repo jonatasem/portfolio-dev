@@ -1,8 +1,6 @@
 import imgGraphic from "../assets/img/projects/graphic.png";
 import imgColognese from "../assets/img/projects/colognese.png";
-import imgMovies from "../assets/img/projects/movies.png";
 import imgCommerce from "../assets/img/projects/e-commerce.png";
-import imgViagens from "../assets/img/projects/viagens.png";
 
 const ProjectsData = [
   {

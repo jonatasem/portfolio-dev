@@ -3,7 +3,7 @@ import ProjectsData from "../../data/api";
 import { useNavigate } from "react-router-dom";
 
 export default function Projects() {
-  const navigate = useNavigate(); // Obtém a função de navegação
+  const navigate = useNavigate();
 
   const handleProjectClick = (id) => {
     navigate(`/project/${id}`);

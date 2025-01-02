@@ -35,7 +35,7 @@ export default function About() {
             <h5>Toyota</h5>
             <span>
               <p>Adamantina, São Paulo, Brasil</p>
-              <p>Outubro de 2022 - Março de 2023</p>
+              <p>Out de 2022 - Mar de 2023</p>
             </span>
             <ul>
               <li>Realização de lavagem de veículos, garantindo a entrega de um serviço de alta qualidade.</li>
@@ -49,7 +49,7 @@ export default function About() {
             <h5>Concessionária Eixo SP</h5>
             <span>
               <p>Adamantina, São Paulo, Brasil</p>
-              <p>Abr de 2021 - Outubri de 2021</p>
+              <p>Abr de 2021 - Out de 2021</p>
             </span>
             <ul>
               <li>Responsável pela cobrança de tarifas de pedágio, garantindo um atendimento rápido e eficiente aos motoristas.</li>
