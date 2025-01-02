@@ -101,6 +101,9 @@
   z-index: 1;
 }
 
+.resume-home {
+  text-align: justify;
+}
 
 @media (max-width: 999px) {
   .home-right {

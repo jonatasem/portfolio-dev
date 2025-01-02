@@ -10,7 +10,7 @@ export default function Projects() {
   };
 
   return (
-    <section className="container-projects" id="projects">
+    <section className="container-projects visible" id="projects">
       <h2>Projetos</h2>
       <ul className="projects-list">
         {ProjectsData.length > 0 ? (

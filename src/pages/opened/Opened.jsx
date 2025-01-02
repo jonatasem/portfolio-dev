@@ -7,24 +7,24 @@ export default function Opened() {
   const project = ProjectsData.find((project) => project.id === parseInt(id));
 
   if (!project) {
-    return <p>Projeto não encontrado.</p>;
+    return <p className="visible">Projeto não encontrado.</p>;
   }
 
   return (
     <section className="container-opened">
       
-      <h2>{project.nome}</h2>
+      <h2 className="visible">{project.nome}</h2>
       <div className="layout-opened">
         <article className="opened-left">
-          <img src={project.img} alt={project.nome} />
-          <p>{project.details}</p>
+          <img className="visible" src={project.img} alt={project.nome} />
+          <p className="visible">{project.details}</p>
         </article>
         <article className="opened-right">
 
-          <p>{project.details_one}</p>
-          <p>{project.details_two}</p>
-          <p>{project.details_tree}</p>
-          <div className="btn-code">
+          <p className="visible">{project.details_one}</p>
+          <p className="visible">{project.details_two}</p>
+          <p className="visible">{project.details_tree}</p>
+          <div className="btn-code visible">
             <a className="live" href={project.link.live} target="_blank" rel="noopener noreferrer">
               Ver Projeto ao Vivo
             </a>
@@ -34,7 +34,7 @@ export default function Opened() {
           </div>
         </article>
       </div>
-      <a className="btn-opened" href="/#projects">Voltar</a>
+      <a className="btn-opened visible" href="/#projects">Voltar</a>
     </section>
   );
 }
