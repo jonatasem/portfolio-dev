@@ -10,6 +10,24 @@
   width: 50%;
   padding: 1rem;
 }
+.opened-right {
+  background-color: #c0c0c01e;
+}
+.opened-right p {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+.opened-right p:last-child {
+  margin-bottom: 0;
+}
+.opened-left img {
+  margin-bottom: 1rem;
+}
+.opened-left p {
+  text-align: justify;
+  max-width: 500px;
+}
+
 .container-opened h2 {
   margin-bottom: 1rem;
 }
@@ -19,10 +37,10 @@
 }
 
 .btn-opened {
-  position: absolute;
+  position: fixed;
   bottom: 25px;
   right: 50px;
-  color: white;
+  color: #d1f34a;
 }
 
 .btn-code {
@@ -82,13 +100,14 @@
   }
 }
 
-
-
 @media (max-width:999px) {
   .layout-opened {
     flex-direction: column;
   }
   .layout-opened article {
     width: 100%;
+  }
+  .opened-left p {
+    max-width: none;
   }
 }

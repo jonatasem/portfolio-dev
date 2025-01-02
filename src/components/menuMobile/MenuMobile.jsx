@@ -4,6 +4,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function MenuMobile() {
   const [menuMobile, setMenuMobile] = useState(false);
+  const [activeItem, setActiveItem] = useState("home"); // Estado para o item ativo
 
   const toggleMenu = () => {
     setMenuMobile(prevState => !prevState);
@@ -13,8 +14,13 @@ export default function MenuMobile() {
     setMenuMobile(false);
   };
 
+  const handleItemClick = (item) => {
+    setActiveItem(item);
+    closeMenu();
+  };
+
   return (
-    <section className={`container-mobile ${menuMobile ? "menu-active" : ""}`}>
+    <section className="container-mobile">
       <div className="container-layout">
         <button 
           onClick={toggleMenu} 
@@ -24,19 +30,19 @@ export default function MenuMobile() {
           {menuMobile ? <FaTimes /> : <FaBars />}
         </button>
         {menuMobile && (
-          <nav className="mobile-navbar">
+          <nav id="active" className="mobile-navbar">
             <ul>
-              <li onClick={closeMenu}>
-                <a href="#home">Início</a>
+              <li onClick={() => handleItemClick("home")}>
+                <a href="#home" id={activeItem === "home" ? "active" : ""}>Início</a>
               </li>
-              <li onClick={closeMenu}>
-                <a href="#about">Sobre Mim</a>
+              <li onClick={() => handleItemClick("about")}>
+                <a href="#about" id={activeItem === "about" ? "active" : ""}>Sobre Mim</a>
               </li>
-              <li onClick={closeMenu}>
-                <a href="#projects">Projetos</a>
+              <li onClick={() => handleItemClick("projects")}>
+                <a href="#projects" id={activeItem === "projects" ? "active" : ""}>Projetos</a>
               </li>
-              <li onClick={closeMenu}>
-                <a href="#contact">Contato</a>
+              <li onClick={() => handleItemClick("contact")}>
+                <a href="#contact" id={activeItem === "contact" ? "active" : ""}>Contato</a>
               </li>
             </ul>
           </nav>

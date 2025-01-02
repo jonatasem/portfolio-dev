@@ -1,6 +1,13 @@
+import React, { useState } from "react";
 import "./Header.css";
 
 export default function Header() {
+  const [activeItem, setActiveItem] = useState("home");
+
+  const handleItemClick = (item) => {
+    setActiveItem(item);
+  };
+
   return (
     <section className="container-header">
       <article className="header-logo">
@@ -12,16 +19,40 @@ export default function Header() {
         <nav>
           <ul>
             <li>
-              <a href="#home">Início</a>
+              <a 
+                href="#home" 
+                id={activeItem === "home" ? "active" : ""}
+                onClick={() => handleItemClick("home")}
+              >
+                Início
+              </a>
             </li>
             <li>
-              <a href="#about">Sobre Mim</a>
+              <a 
+                href="#about" 
+                id={activeItem === "about" ? "active" : ""}
+                onClick={() => handleItemClick("about")}
+              >
+                Sobre Mim
+              </a>
             </li>
             <li>
-              <a href="#projects">Projetos</a>
+              <a 
+                href="#projects" 
+                id={activeItem === "projects" ? "active" : ""}
+                onClick={() => handleItemClick("projects")}
+              >
+                Projetos
+              </a>
             </li>
             <li>
-              <a href="#contact">Contato</a>
+              <a 
+                href="#contact" 
+                id={activeItem === "contact" ? "active" : ""}
+                onClick={() => handleItemClick("contact")}
+              >
+                Contato
+              </a>
             </li>
           </ul>
         </nav>

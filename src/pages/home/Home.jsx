@@ -1,5 +1,5 @@
 import "./Home.css";
-import { Link } from "react-router-dom";
+import Curriculo from '../../assets/pdf/jonatas-elieser-moreira-front-end.pdf';
 
 //imagens
 import imgAutor from "../../assets/img/autor.png";
@@ -36,10 +36,10 @@ export default function Home() {
         <p>Aqui estão algumas das tecnologias com as quais trabalhei:</p>
         <ul className="home-skills">{getDataSkill()}</ul>
         <div className="home-buttons">
-          <a href="#">Entre em contato</a>
-          <button className="btn-curriculo">
+          <a href="#contact">Entre em contato</a>
+          <a href={Curriculo} className="btn-curriculo">
             <span>Baixar meu Currículo</span>
-          </button>
+          </a>
         </div>
       </article>
       <article className="home-right">

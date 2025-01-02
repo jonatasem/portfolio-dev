@@ -17,9 +17,13 @@ export default function Opened() {
       <div className="layout-opened">
         <article className="opened-left">
           <img src={project.img} alt={project.nome} />
+          <p>{project.details}</p>
         </article>
         <article className="opened-right">
-          <p>{project.description}</p>
+
+          <p>{project.details_one}</p>
+          <p>{project.details_two}</p>
+          <p>{project.details_tree}</p>
           <div className="btn-code">
             <a className="live" href={project.link.live} target="_blank" rel="noopener noreferrer">
               Ver Projeto ao Vivo
